@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中泰双语词卡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#4F46E5',
+secondary: '#6366F1'
+},
+borderRadius: {
+'none': '0px',
+'sm': '2px',
+'DEFAULT': '4px',
+'md': '8px',
+'lg': '12px',
+'xl': '16px',
+'2xl': '20px',
+'3xl': '24px',
+'full': '9999px',
+'button': '4px'
+}
+}
+}
+}
+</script>
+<style>
+body {
+min-height: 1024px;
+font-family: 'Noto Sans SC', sans-serif;
+}
+.thai-text {
+font-family: 'Noto Sans Thai', sans-serif;
+}
+.word-card {
+transition: all 0.3s ease;
+}
+.word-card:hover {
+transform: translateY(-4px);
+}
+.sound-btn {
+transition: all 0.2s ease;
+}
+.sound-btn:hover {
+color: #4F46E5;
+transform: scale(1.1);
+}
+.sound-btn:active {
+transform: scale(0.95);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<div class="max-w-[1440px] mx-auto px-8 py-12">
+<h1 class="text-3xl font-semibold text-center mb-12">中泰双语词卡</h1>
+<div class="grid grid-cols-4 gap-6 mb-6">
+<!-- 你 -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/1ef3bbaccf2c937949f0657415bea4d9.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">คุณ</p>
+<button class="sound-btn" onclick="playSound('คุณ')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">You</p>
+<button class="sound-btn" onclick="playSound('You')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<!-- I -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/189ccae63f35d4e9f2006a8cec522fce.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">ฉัน</p>
+<button class="sound-btn" onclick="playSound('ฉัน')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">I</p>
+<button class="sound-btn" onclick="playSound('我')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<!-- He -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/9457128a1cf95259b84a619db8ddccb3.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">เขา</p>
+<button class="sound-btn" onclick="playSound('เขา')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">He</p>
+<button class="sound-btn" onclick="playSound('他')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<!-- She -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/7675bd3abc04e87369f7b3c0c90e507b.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">เธอ</p>
+<button class="sound-btn" onclick="playSound('เธอ')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">She</p>
+<button class="sound-btn" onclick="playSound('她')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-6">
+<!-- 谢谢你 -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/276874956bf2f29e13a73c5b502f54e2.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">ขอบคุณ</p>
+<button class="sound-btn" onclick="playSound('ขอบคุณ')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">Thank you</p>
+<button class="sound-btn" onclick="playSound('Thank you')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<!-- You're welcome -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/db868bbfb00cd89d6a74ac566fece4d7.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">ไม่เป็นไร</p>
+<button class="sound-btn" onclick="playSound('ไม่เป็นไร')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">You're welcome</p>
+<button class="sound-btn" onclick="playSound('不用谢')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<!-- Sorry -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/98b32cf2e3cbed7d952bc8cc41176a94.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">ขอโทษ</p>
+<button class="sound-btn" onclick="playSound('ขอโทษ')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">Sorry</p>
+<button class="sound-btn" onclick="playSound('对不起')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<!-- It's OK -->
+<div class="word-card bg-white rounded-xl shadow-md overflow-hidden">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://ai-public.mastergo.com/ai/img_res/a87331a41402d9ea52a12b7780c13e79.jpg')"></div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="thai-text text-xl">ไม่เป็นไร</p>
+<button class="sound-btn" onclick="playSound('ไม่เป็นไร')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-xl">It's OK</p>
+<button class="sound-btn" onclick="playSound('没关系')">
+<i class="fas fa-volume-up text-gray-600 w-6 h-6 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+<div class="px-6 pb-4 flex justify-between">
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-share-alt w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="text-gray-600 hover:text-primary">
+<i class="fas fa-bookmark w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+// 预加载所有音频文件
+const audioFiles = {
+'คุณ': 'https://translate.google.com/translate_tts?ie=UTF-8&q=คุณ&tl=th&client=tw-ob',
+'You': 'https://translate.google.com/translate_tts?ie=UTF-8&q=You&tl=en&client=tw-ob',
+'ฉัน': 'https://translate.google.com/translate_tts?ie=UTF-8&q=ฉัน&tl=th&client=tw-ob',
+'我': 'https://translate.google.com/translate_tts?ie=UTF-8&q=I&tl=en&client=tw-ob',
+'เขา': 'https://translate.google.com/translate_tts?ie=UTF-8&q=เขา&tl=th&client=tw-ob',
+'他': 'https://translate.google.com/translate_tts?ie=UTF-8&q=He&tl=en&client=tw-ob',
+'เธอ': 'https://translate.google.com/translate_tts?ie=UTF-8&q=เธอ&tl=th&client=tw-ob',
+'她': 'https://translate.google.com/translate_tts?ie=UTF-8&q=She&tl=en&client=tw-ob',
+'ขอบคุณ': 'https://translate.google.com/translate_tts?ie=UTF-8&q=ขอบคุณ&tl=th&client=tw-ob',
+'Thank you': 'https://translate.google.com/translate_tts?ie=UTF-8&q=Thank+you&tl=en&client=tw-ob',
+'ไม่เป็นไร': 'https://translate.google.com/translate_tts?ie=UTF-8&q=ไม่เป็นไร&tl=th&client=tw-ob',
+'不用谢': 'https://translate.google.com/translate_tts?ie=UTF-8&q=You%27re+welcome&tl=en&client=tw-ob',
+'ขอโทษ': 'https://translate.google.com/translate_tts?ie=UTF-8&q=ขอโทษ&tl=th&client=tw-ob',
+'对不起': 'https://translate.google.com/translate_tts?ie=UTF-8&q=Sorry&tl=en&client=tw-ob',
+'没关系': 'https://translate.google.com/translate_tts?ie=UTF-8&q=It%27s+OK&tl=en&client=tw-ob'
+};
+let audioCache = {};
+// 预加载音频
+function preloadAudio() {
+for (let word in audioFiles) {
+const audio = new Audio();
+audio.src = audioFiles[word];
+audioCache[word] = audio;
+}
+}
+// 播放音频
+function playSound(word) {
+if (audioCache[word]) {
+// 如果音频正在播放，先重置
+audioCache[word].currentTime = 0;
+audioCache[word].play().catch(error => {
+console.error('播放音频失败:', error);
+// 如果播放失败，使用fallback的提示音
+playFallbackSound();
+});
+} else {
+// 如果没有对应的音频文件，播放提示音
+playFallbackSound();
+}
+}
+// Fallback提示音
+function playFallbackSound() {
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const oscillator = audioContext.createOscillator();
+const gainNode = audioContext.createGain();
+oscillator.type = 'sine';
+oscillator.frequency.value = 440;
+gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+oscillator.connect(gainNode);
+gainNode.connect(audioContext.destination);
+oscillator.start();
+oscillator.stop(audioContext.currentTime + 0.5);
+}
+// 当页面加载完成后预加载音频
+document.addEventListener('DOMContentLoaded', () => {
+preloadAudio();
+});
+</script>
+</body>
+</html>
